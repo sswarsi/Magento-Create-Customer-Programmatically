@@ -1,13 +1,13 @@
 <?php
 
-$store = Mage::app()->getStore();
-$website = Mage::app()->getWebsite();
-$websiteId = $website->getId();
+$storename = Mage::app()->getStore();
+$www = Mage::app()->getWebsite();
+$websiteId = $www->getId();
  
-$firstName = '?????';
-$lastName = '?????';
-$email = '??????@example.com';
-$logFileName = 'my-log-file.log';
+$firstName = 'Syed';
+$lastName = 'Warsi';
+$email = 'sswarsi@hotmail.com.com';
+$logFileName = 'customer.log';
  
 $address = array(
             'customer_address_id' => '',
@@ -58,7 +58,7 @@ if ($customer->getId()) {
     $password = $customer->generatePassword(); // custom password
     
     $customer->setWebsiteId($websiteId)
-             ->setStore($store)
+             ->setStore($storename)
              ->setFirstname($firstName)
              ->setLastname($lastName)
              ->setEmail($email)
